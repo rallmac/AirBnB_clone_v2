@@ -5,6 +5,7 @@ from sqlalchemy.orm import scoped_session, sessionmaker
 from models.base_model import Base
 import os
 
+
 class DBStorage:
     """This class manages storage of hbnb models in a MySQL database"""
     __engine = None
@@ -62,5 +63,4 @@ class DBStorage:
 
     def close(self):
         """Call remove() method on the private session attribute or close() on the session"""
-        if self.__session:
-            self.__session.remove()
+        self.__session.cose()
